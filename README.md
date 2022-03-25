@@ -5,6 +5,8 @@ Customers will also be able to use promo codes to help save money on their purch
 to descending prices and vice-versa.
 
 Technologies Used
+
+
 Angular
 Bootstrap 
 Spring MVC
@@ -14,6 +16,8 @@ Spring CORE
 Rest API
 
 Features
+
+
 
 Login Validation
 Adding products to the cart
