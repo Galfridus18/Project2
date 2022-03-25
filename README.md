@@ -5,19 +5,17 @@ Customers will also be able to use promo codes to help save money on their purch
 to descending prices and vice-versa.
 
 Technologies Used
-
-
 Angular
 Bootstrap 
 Spring MVC
+TypeScript
 CSS
 HTML
-Spring CORE
+Spring Boot
+Spring Data
 Rest API
 
 Features
-
-
 
 Login Validation
 Adding products to the cart
@@ -29,31 +27,27 @@ Order page
 Register to page
 Items show up as featured on the home page
 Product page
-Products sorted by price low to high
-Products sorted by price high to low
+Products are sorted by category
+
 
 
 
 Getting Started
-
-Here are two repositories needed to run this project:
+These two repositories are needed to run this App:
 
 https://github.com/angeudybp/electronicsShop.git
 
 
 https://github.com/angeudybp/electronicsShop-backend
 
-![Project2Wire-Frame](https://user-images.githubusercontent.com/98780216/160184178-281c022a-ee42-47a3-99bb-13f3e4f8d053.jpg)
 
-
-![ProjectStructure](https://user-images.githubusercontent.com/98780216/160184254-2ccdc703-651e-43b4-8977-93a3a41639cc.jpg)
 
 
 
 All the code required to get started
-Images of what it should look like
+In order to use this project you just need to run both repositories, first one in VS Code and the Second one in Intellij or any other platform that is compatible with Java projects. Note: the config.yml file has to be edited in the backend to run it. (port number and a database has to be provided) 
 Usage
-Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+All you need to used this app is both repositories running and then visit localhost:4200 to use it. Also make sure that the config.yml file in the resource folder of the backend has the information for the port and database configuration.
 
 Contributors
 Angeudy Brisita Perez
