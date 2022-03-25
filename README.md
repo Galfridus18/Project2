@@ -5,7 +5,8 @@ Project Description
 The Electronics App is an e-commerce website where registered users may select from a wide range of electronic devices and accessories to purchase. 
 Customers will also be able to use promo codes to help save money on their purchases. In addition, customers will be able to view products by category.
 
-Technologies Used
+Technologies Used:
+
 Angular
 Bootstrap 
 Spring MVC
@@ -33,7 +34,8 @@ Products are sorted by category
 
 
 
-Getting Started
+Getting Started:
+
 These two repositories are needed to run this App:
 
 https://github.com/angeudybp/electronicsShop.git
