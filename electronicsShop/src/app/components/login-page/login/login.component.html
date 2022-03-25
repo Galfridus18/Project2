@@ -1,0 +1,43 @@
+
+
+<body class="text-center" *ngIf="!isUserLogged(); else homepage">
+    
+<main class="form-signin">
+  <form (ngSubmit)="onSubmit(signInForm)"#signInForm="ngForm" >    
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input  type="text"
+      name="username"
+      class="form-control"
+      [(ngModel)]="user.username"      
+      #username="ngModel"
+      [class.is-invalid]="username.invalid && username.touched"
+      required>
+      <label for="floatingInput">Username</label>
+      <small class="text-danger" [class.d-none]="username.untouched || username.valid">*This is a required field</small>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" [(ngModel)]="user.password" 
+      #password="ngModel" name="password" 
+      [class.is-invalid]="password.invalid && password.touched"
+       required >
+      <label for="floatingInput">Password</label>
+      <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is a required field</small>
+    </div>
+    <div *ngIf="invalidLogin" class="alert alert-danger" role="alert">
+      Invalid credentials please try again!
+    </div>
+    <div class="p mb-3 fw-normal"><a href="#">Don't have an account?</a></div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>    
+</body>
+
+<ng-template #homepage>
+  <app-container></app-container>
+</ng-template>
+
+
+
