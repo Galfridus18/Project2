@@ -31,7 +31,12 @@ Products sorted by price high to low
 
 
 Getting Started
+
+Here are two repositories needed to run this project:
+
 https://github.com/angeudybp/electronicsShop.git
+
+
 https://github.com/angeudybp/electronicsShop-backend
 
 ![Project2Wire-Frame](https://user-images.githubusercontent.com/98780216/160184178-281c022a-ee42-47a3-99bb-13f3e4f8d053.jpg)
