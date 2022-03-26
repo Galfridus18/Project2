@@ -27,7 +27,9 @@ export class AuthenticationService {
     return this.http.post<any>('http://localhost:9000/users/'+username+'+'+password,{},{'headers':{'content-type':'application/json'}});
 
   }
-
+  addUser(user:User):Observable<User>{
+    return this.http.post<User>('http://localhost:9000/users',user)
+  }
   saveUserInfo(user:User):Observable<User>{
     return this.http.put<User>('http://localhost:9000/users/'+user.userId,user)
   }

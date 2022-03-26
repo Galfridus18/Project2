@@ -24,6 +24,10 @@ import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-
 import { CartPageComponent } from './components/cart/cart-page/cart-page.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { RegisterComponent } from './components/register/register/register.component';
+import { CheckoutConfirmComponent } from './components/cart/checkout-confirm/checkout-confirm.component';
+import { OrdersComponent } from './components/orders/orders/orders.component';
+
 
 
 
@@ -49,6 +53,10 @@ import { FilterPipe } from './shared/filter.pipe';
     CartPageComponent,
     ProfileComponent,
     FilterPipe,
+    RegisterComponent,
+    CheckoutConfirmComponent,
+    OrdersComponent,
+    
     
     
     

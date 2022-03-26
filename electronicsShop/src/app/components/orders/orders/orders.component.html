@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <div class="rounded">
+                <div class="table-responsive table-borderless">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <div class="toggle-btn">
+                                        <div class="inner-circle"></div>
+                                    </div>
+                                </th>
+                                <th>Order #</th>
+                                <th>Shipping to</th>
+                                <th>Shipping Address</th>
+                                <th>Total</th>
+                                <th>Payment Type</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="cell-1" *ngFor="let order of listOrders">
+                                <td class="text-center">
+                                    <div class="toggle-btn">
+                                        <div class="inner-circle"></div>
+                                    </div>
+                                </td>
+                                <td>{{order.orderNumber}}</td>
+                                <td>{{order.nameOnCard}}</td>
+                                <td>{{order.shippingAddress}}</td>
+                                <td>{{order.amount}}</td>
+                                <td>{{order.paymentType}}</td>
+                                <td><i class="fa fa-ellipsis-h text-black-50"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

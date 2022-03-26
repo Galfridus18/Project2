@@ -22,9 +22,7 @@ export class NavbarComponent implements OnInit {
   isUserLogged():boolean{
     return this.auth.isUserLoggedIn();
   }
-  clickTest(){
-    console.log('clicked');
-  }
+  
   loggedOut():void{
     console.log('clicked');
     this.auth.logOut();

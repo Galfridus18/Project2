@@ -1,0 +1,73 @@
+<div class="container">
+  
+  
+  
+  <div class="row justify-content-center">
+  <div class="col-md-6">
+  <div class="card">
+  <header class="card-header">
+    <a routerLink="../" class="btn btn-outline-primary mt-1" style="float: right;">Log in</a>
+    <h4 class="card-title mt-2">Sign up</h4>
+  </header>
+  <article class="card-body">
+  <form #registerForm="ngForm" (submit)="formSubmit()">
+    <div class="form-row">
+      <div class="col form-group">
+        <label>username </label>   
+          <input type="text" class="form-control" name="username" [(ngModel)]="user.username" #username="ngModel" required>
+          <small class="text-danger" [class.d-none]="username.untouched || username.valid">*This is a required field</small>
+      </div>
+      <div class="col form-group">
+        <label>Full name </label>   
+          <input type="text" class="form-control" name="name" [(ngModel)]="user.name" #name="ngModel" required>
+          <small class="text-danger" [class.d-none]="name.untouched || name.valid">*This is a required field</small>
+      </div> <!-- form-group end.// -->
+      
+    </div> <!-- form-row end.// -->
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required>
+      <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is a required field</small>
+      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div> <!-- form-group end.// -->
+    
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" name="address1" [(ngModel)]="addressText1" #address="ngModel" required>
+        <small class="text-danger" [class.d-none]="address.untouched || address.valid">*This is a required field</small>
+      </div> <!-- form-group end.// -->
+      <div class="form-group col-md-6">
+        <label>Country</label>
+        <select id="address" class="form-control" name="address2" [(ngModel)]="addressText2" #address2="ngModel" required>
+          <option selected=""> Choose...</option>
+            <option>Uzbekistan</option>
+            <option>Russia</option>
+            <option >United States</option>
+            <option>India</option>
+            <option>Afganistan</option>
+        </select>
+        <small class="text-danger" [class.d-none]="address2.untouched || address2.valid">*This is a required field</small>
+      </div> <!-- form-group end.// -->
+    </div> <!-- form-row.// -->
+    <div class="form-group">
+      <label>Create password</label>
+        <input class="form-control" type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+        <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is a required field</small>
+      </div> <!-- form-group end.// -->  
+      <div class="form-group">
+          <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:39%; margin-top: 10px;"> Register  </button>
+      </div> <!-- form-group// -->      
+      <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+  </form>
+  </article> <!-- card-body end .// -->
+  <div class="border-top card-body text-center">Have an account? <a routerLink="../">Log In</a></div>
+  </div> <!-- card.// -->
+  </div> <!-- col.//-->
+  
+  </div> <!-- row.//-->
+  
+  
+  </div> 
+  <!--container end.//-->

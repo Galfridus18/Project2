@@ -23,7 +23,6 @@ export class CategoriesComponent implements OnInit {
       window.location.reload();
     })
   }
-
   
 }
 
