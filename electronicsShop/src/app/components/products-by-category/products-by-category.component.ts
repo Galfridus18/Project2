@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/authentication/authentication.service';
 import { ProductServiceService } from 'src/app/productsService/product-service.service';
+import { OrderByPipe } from 'src/app/shared/order-by.pipe';
 
 @Component({
   selector: 'app-products-by-category',
@@ -13,10 +14,10 @@ import { ProductServiceService } from 'src/app/productsService/product-service.s
 export class ProductsByCategoryComponent implements OnInit {
   public products: any[]=[];
   public filterCategory:any;
-  public categories:any;
+  public categories:any;  
 
   public category:any;
-  constructor(private cart:CartService,private activatedRoute:ActivatedRoute, private auth: AuthenticationService, private data:ProductServiceService, private router:Router) { 
+  constructor(private cart:CartService,private activatedRoute:ActivatedRoute, private auth: AuthenticationService, private data:ProductServiceService, private router:Router, private sortPipe: OrderByPipe) { 
     
   }
 
@@ -51,8 +52,13 @@ export class ProductsByCategoryComponent implements OnInit {
         if(a.category == category || category==''){
           return a;
         }
-      })
-    
+      })    
+  }
+  orderByAsc(){
+    this.filterCategory = this.sortPipe.transform(this.filterCategory,"asc","price");
+  }
+  orderByDesc(){
+    this.filterCategory = this.sortPipe.transform(this.filterCategory,"desc","price");
   }
 }
 

@@ -13,16 +13,9 @@ export class CategoriesComponent implements OnInit {
   constructor(private products:ProductServiceService, private router:Router) { }
 
   ngOnInit(): void {    
-      this.products.getProductCategories().subscribe(data=>{
-        this.categories = data
-      })
+      
   }
-  sendInfo(category:any){
-    this.router.navigate(['categories',category])
-    .then(()=>{
-      window.location.reload();
-    })
-  }
+  
   
 }
 

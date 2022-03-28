@@ -27,6 +27,8 @@ import { FilterPipe } from './shared/filter.pipe';
 import { RegisterComponent } from './components/register/register/register.component';
 import { CheckoutConfirmComponent } from './components/cart/checkout-confirm/checkout-confirm.component';
 import { OrdersComponent } from './components/orders/orders/orders.component';
+import { OrderByPipe } from './shared/order-by.pipe';
+
 
 
 
@@ -56,6 +58,7 @@ import { OrdersComponent } from './components/orders/orders/orders.component';
     RegisterComponent,
     CheckoutConfirmComponent,
     OrdersComponent,
+    OrderByPipe,
     
     
     
@@ -66,11 +69,12 @@ import { OrdersComponent } from './components/orders/orders/orders.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,   
     
     
   ],
-  providers: [],
+  exports: [OrderByPipe],
+  providers: [OrderByPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
