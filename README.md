@@ -58,5 +58,6 @@ All you need to used this app is both repositories running and then visit localh
 
 ## Contributors
 Angeudy Brisita Perez
+
 Jeffrey L. Espana
 
