@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth:AuthenticationService) { }
 
   ngOnInit(): void {
   }
+
+  isUserLogged():boolean{
+    return this.auth.isUserLoggedIn();
+  }
+
+
 
 }

@@ -27,5 +27,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  isUserLogged():boolean{
+    return this.auth.isUserLoggedIn();
+  }
+
 
 }

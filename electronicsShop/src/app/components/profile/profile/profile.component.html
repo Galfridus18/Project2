@@ -1,4 +1,4 @@
-<div class="container rounded bg-white mt-5 mb-5">
+<div class="container rounded bg-white mt-5 mb-5" *ngIf=" isUserLogged(); else logged_out">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://images-ext-2.discordapp.net/external/8Wfz-PUZWUsMEOVD8X7MtSaf97wg6a-haUKlmedLEic/https/pbs.twimg.com/profile_images/1402435684879650816/wkGa-Ll__400x400.jpg"><span class="font-weight-bold">{{user.name}}</span><span class="text-black-50">{{user.email}}</span><span> </span></div>
@@ -26,3 +26,9 @@
         
     </div>
 </div>
+
+<ng-template #logged_out>
+    <app-login></app-login>
+    
+  </ng-template>
+

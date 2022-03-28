@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 10px;">
+<div class="container" style="margin-top: 10px;"  *ngIf=" isUserLogged(); else logged_out">
     
     <div class="row g-5">
         <div class="col-md-7 col-lg-8">
@@ -9,5 +9,11 @@
         </div>
     </div>
 </div>
+
+<ng-template #logged_out>
+    <app-login></app-login>
+    
+  </ng-template>
+
 
 

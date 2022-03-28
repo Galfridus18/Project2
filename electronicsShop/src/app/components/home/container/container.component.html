@@ -1,5 +1,5 @@
 
-<div class="container bg-light">
+<div class="container bg-light" *ngIf=" isUserLogged(); else logged_out">
     <div class="row margin-sm">
         <div class="col justify-content-center">
             <app-homepage></app-homepage>
@@ -17,3 +17,9 @@
         </div>
     </div>
 </div>
+
+<ng-template #logged_out>
+    <app-login></app-login>
+    
+  </ng-template>
+
